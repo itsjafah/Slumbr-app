@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bed_type: MyString
+  size: MyString
+  price: 1
+
+two:
+  bed_type: MyString
+  size: MyString
+  price: 1
