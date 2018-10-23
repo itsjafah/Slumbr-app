@@ -1,9 +1,28 @@
+.menu-bar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+}
+
+#menu {
+  margin-bottom: 0px;
+  border-bottom: solid #f0f0f0 1px;
+}
+
+#how-it-works {
+  /* padding-top: 57px; */
+}
+
 .logo-tagline {
   display: flex;
   text-align: center;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 50px;
 }
 
 .tagline {
@@ -22,20 +41,34 @@
   font-size: 64px;
 }
 
-.banner-img {
-  background-image: url('https://i.imgur.com/2gqy9Sb.jpg');
-  min-height: 500px;
+/* .banner {
+  margin-top: 60px;
+} */
 
-  background-attachment: fixed;
+.banner-img {
+  background: url('https://i.imgur.com/2gqy9Sb.jpg');
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   background-color: #f9c6db;
+
+  right: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin-top: 45px;
+  z-index: -600;
 }
 
 .carousel {
   display: flex;
   justify-content: center;
+}
+
+.section-container {
+  padding-top: 20px;
 }
 
 .section-content {
@@ -62,7 +95,7 @@
   justify-content: center;
 }
 
-.carousel-cell{
+.carousel-cell {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -72,12 +105,18 @@
   border-bottom-style: solid; */
 }
 
-body{
+body {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-.under-banner{
+.under-banner {
+  /* padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px; */
+
   padding-left: 30px;
   padding-right: 30px;
-  padding-bottom: 30px
+  padding-bottom: 30px;
+  margin-top: 650px;
+  background-color: white;
 }

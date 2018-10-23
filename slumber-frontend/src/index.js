@@ -11,3 +11,5 @@ let flkty = new Flickity( elem, {
   autoPlay: 3000,
   pauseAutoPlayOnHover: false
 });
+
+let instance = M.Tabs.getInstance(elem)
