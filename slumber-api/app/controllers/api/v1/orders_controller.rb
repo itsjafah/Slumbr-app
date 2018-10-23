@@ -11,7 +11,6 @@ class Api::V1::OrdersController < ApplicationController
   end
 
   def create
-    # byebug
     @order = Order.create(order_params)
     render json: @order, status: :created
   end
@@ -27,4 +26,5 @@ class Api::V1::OrdersController < ApplicationController
   def order_params
     params.require(:order).permit(:bed_id, :host_id, :pillows, :extra_sheets, :start_date, :end_date, :total_price)
   end
+  
 end

@@ -11,7 +11,6 @@ class Api::V1::HostsController < ApplicationController
   end
 
   def create
-    # byebug
     @host = Host.create(host_params)
     render json: @host, status: :created
   end
