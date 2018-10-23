@@ -50,10 +50,34 @@
   color: black;
 }
 
-.carousel-header {
-
+.how-to-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.carousel-body {
+.carousel-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
+.carousel-cell{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-width: 100%;
+  /* border-top-style: solid;
+  border-bottom-style: solid; */
+}
+
+body{
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.under-banner{
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px
 }

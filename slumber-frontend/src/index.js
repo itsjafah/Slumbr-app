@@ -3,3 +3,11 @@ document.addEventListener('DOMContentLoaded',() => {
     .then(resp => resp.json())
     .then(respJSON => console.log(respJSON))
 })
+
+let elem = document.querySelector('.main-carousel');
+let flkty = new Flickity( elem, {
+  contain: true,
+  wrapAround: true,
+  autoPlay: 3000,
+  pauseAutoPlayOnHover: false
+});
