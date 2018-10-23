@@ -1,0 +1,59 @@
+.logo-tagline {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tagline {
+  display: flex;
+  color: #f0f0f0;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-size: 24px;
+}
+
+.logo {
+  display: flex;
+  color: #f0f0f0;
+  margin-top: 1%;
+  margin-bottom: -1%;
+  font-size: 64px;
+}
+
+.banner-img {
+  background-image: url('https://i.imgur.com/2gqy9Sb.jpg');
+  min-height: 500px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #f9c6db;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+}
+
+.section-content {
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.carousel-page-one {
+  display: flex;
+  color: black;
+}
+
+.carousel-header {
+
+}
+
+.carousel-body {
+
+}
