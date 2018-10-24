@@ -75,40 +75,29 @@ document.addEventListener('DOMContentLoaded',() => {
       .then(parsed=> hostID = parsed.id)
     event.target.reset()
     secondInstances.open()
-    secondModal.innerHTML=`    <div class="modal-content">
+    secondModal.innerHTML=`
+        <div class="modal-content">
           <h4>Time To Make Your Bed</h4>
           <form class="make-your-bed-form">
             <div class="main-carousel" id="flickity-2">
-              <div class="carousel-cell">
+              <div class="bed-size-carousel-cell carousel-cell">
                 <div class="second-carousel-image">
-                    <img src="https://i.imgur.com/eBMXUbX.png" alt="Image of bed" />
-                </div>
-                <div class="how-to-contents">
-                    <h3 class="carousel-body">Twin</h3>
+                  <img class="bed-size-img" src="https://i.imgur.com/eBMXUbX.png" alt="Image of bed" />
                 </div>
               </div>
-              <div class="carousel-cell">
+              <div class="bed-size-carousel-cell carousel-cell">
                 <div class="second-carousel-image">
-                    <img src="https://i.imgur.com/U92wyel.png" alt="Image of bed" />
-                </div>
-                <div class="how-to-contents">
-                    <h3 class="carousel-body">Full</h3>
+                  <img class="bed-size-img" src="https://i.imgur.com/U92wyel.png" alt="Image of bed" />
                 </div>
               </div>
-              <div class="carousel-cell">
+              <div class="bed-size-carousel-cell carousel-cell">
                 <div class="second-carousel-image">
-                    <img src="https://i.imgur.com/2jkitjA.png" alt="Image of bed" />
-                </div>
-                <div class="how-to-contents">
-                    <h3 class="carousel-body">Queen</h3>
+                  <img class="bed-size-img" src="https://i.imgur.com/2jkitjA.png" alt="Image of bed" />
                 </div>
               </div>
-              <div class="carousel-cell">
+              <div class="bed-size-carousel-cell carousel-cell">
                 <div class="second-carousel-image">
-                  <img src="https://i.imgur.com/H7soVZU.png" alt="Image of bed" />
-                </div>
-                <div class="how-to-contents">
-                  <h3 class="carousel-body">King</h3>
+                  <img class="bed-size-img" src="https://i.imgur.com/H7soVZU.png" alt="Image of bed" />
                 </div>
               </div>
             </div>
@@ -118,21 +107,17 @@ document.addEventListener('DOMContentLoaded',() => {
           <input type="submit" href="#modal2" class="modal-close waves-effect waves-green btn-flat modal-trigger" value="Submit">
           </form>
         </div>
-    `
-let elem = document.querySelectorAll('.main-carousel');
-let flktyTwo = new Flickity( elem[1], {
-  // contain: true,
-  wrapAround: true,
-  resize: true,
-  // autoPlay: 5000,
-  pauseAutoPlayOnHover: true
-})
-document.querySelector("#modal2").querySelector(".flickity-viewport").style.height="800px"
-    //   document.getElementsByClassName("flickity-viewport")[1].style.height = "200px"
-    //   document.getElementsByClassName('main-carousel')[1].flkty('resize')
-    //   console.log(document.getElementsByClassName('main-carousel')[1])
-    //   .flkty.resize()
+      `
+  let elem = document.querySelectorAll('.main-carousel');
+  let flktyTwo = new Flickity( elem[1], {
+    contain: true,
+    wrapAround: true,
+    resize: true,
+    pauseAutoPlayOnHover: true
   })
+  document.querySelector("#modal2").querySelector(".flickity-viewport").style.height="200px"
+  })
+
   window.addEventListener("click", function (event) {
     if (event.target.innerText === "SLUMBR") {
       window.scrollTo({top: 0, behavior: 'smooth'})

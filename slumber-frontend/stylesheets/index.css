@@ -132,5 +132,16 @@ body {
 #flickity-2{
   margin: auto;
   width: 80%;
-  height: 80px;
+  height: 40%;
+}
+
+.bed-size-img {
+  width: 40%;
+  justify-content: center;
+}
+
+.second-carousel-image {
+  display: flex;
+  justify-content: center;
+  max-height: 200px;
 }
