@@ -17,10 +17,11 @@
     <div class="row" id="menu">
       <div class="col s12">
         <ul class="tabs">
-          <li class="tab col s3"><a class="active">Slumbr</a></li>
-          <li class="tab col s3"><a>How It Works</a></li>
-          <li class="tab col s3"><a>About Us</a></li>
-          <li class="tab col s3"><a>Make Your Bed</a></li>
+          <li class="tab col s3"><a id="slumbr-menu-button" class="active">Slumbr</a></li>
+          <li class="tab col s3"><a id="how-it-works-menu-button">How It Works</a></li>
+          <li class="tab col s3"><a id="about-us-menu-button">About Us</a></li>
+          <!-- <li class="tab col s3"><a id="make-your-bed-menu-button">Make Your Bed</a></li> -->
+          <li class="tab col s3"><a class="waves-effect waves-light modal-trigger" href="#modal1">Make Your Bed</a></li>
         </ul>
       </div>
     </div>
@@ -78,6 +79,7 @@
                 <div class="how-to-contents">
                     <h2 class="carousel-header">Rejoice</h2>
                     <h3 class="carousel-body">Let's get started!</h3>
+                    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Make Your Bed</a>
                 </div>
             </div>
 
@@ -98,6 +100,47 @@
       <img class="team-pic" src="https://images.mentalfloss.com/sites/default/files/styles/mf_image_16x9/public/a-team_1.jpg?itok=ZW8qovPC&resize=1100x1100" alt="A-Team">
     </div>
   </div>
+
+
+  <!-- Modal Trigger -->
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal modal-fixed-footer">
+    <form class="user-info-modal">
+      <div class="modal-content">
+        <h4>Please Enter Your Information</h4>
+        <input id="name-input" type="text" value="" placeholder="First Name">
+        <input id="email-input" type="text" value="" placeholder="Email Address">
+        <input id="street-input" type="text" value="" placeholder="Street">
+        <input id="city-input" type="text" value="" placeholder="City">
+        <input id="state-input" type="text" value="" placeholder="State">
+        <input id="zip-input" type="number" value="" placeholder="Zip Code">
+      </div>
+      <div class="modal-footer">
+        <input type="submit" href="#modal2" class="modal-close waves-effect waves-green btn-flat modal-trigger" value="Submit">
+      </div>
+    </form>
+  </div>
+  <!-- End Modal -->
+
+  <div id="modal2" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Please Enter Your Information</h4>
+      <!-- <input type="text" value="" placeholder="First Name">
+      <input type="text" value="" placeholder="Email Address">
+      <input type="text" value="" placeholder="Street">
+      <input type="text" value="" placeholder="City">
+      <input type="text" value="" placeholder="State"> -->
+      <input type="number" value="" placeholder="Zip Code">
+    </div>
+    <div class="modal-footer">
+      <input type="submit" href="#modal2" class="modal-close waves-effect waves-green btn-flat modal-trigger" value="Submit">
+    </div>
+  </div>
+
+
+
+
 </div>
     <script src="./src/index.js"></script>
 </body>
