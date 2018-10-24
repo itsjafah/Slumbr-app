@@ -16,13 +16,13 @@ document.addEventListener('DOMContentLoaded',() => {
     pauseAutoPlayOnHover: true
   })
 
-  let flktyTwo = new Flickity( elem[1], {
-    // contain: true,
-    wrapAround: true,
-    resize: true,
-    // autoPlay: 5000,
-    pauseAutoPlayOnHover: true
-  })
+  // let flktyTwo = new Flickity( elem[1], {
+  //   // contain: true,
+  //   wrapAround: true,
+  //   resize: true,
+  //   // autoPlay: 5000,
+  //   pauseAutoPlayOnHover: true
+  // })
 
   // let instance = M.Tabs.getInstance(elem)
 
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded',() => {
   let firstModal = document.querySelectorAll('.modal')[0]
   let secondModal = document.querySelectorAll('.modal')[1]
   let firstInstances = M.Modal.init(firstModal, {})
-  let secondInstances = M.Modal.init(secondModal, {})
+  let secondInstances = M.Modal.init(secondModal,{})
 
   window.addEventListener("click", function (event) {
     if (event.target.innerText === "MAKE YOUR BED") {
@@ -79,18 +79,75 @@ document.addEventListener('DOMContentLoaded',() => {
       },
       body: JSON.stringify({
         name: nameInput.value,
-        street_address: emailInput.value,
-        city: streetInput.value,
-        state: cityInput.value,
-        zip: stateInput.value,
-        email: zipInput.value,
+        street_address: streetInput.value,
+        city: cityInput.value,
+        state: stateInput.value,
+        zip: zipInput.value,
+        email: emailInput.value,
       }),
     }).then(res=>res.json())
       .then(parsed=> hostID = parsed.id)
 
     event.target.reset()
     secondInstances.open()
-    
+    secondModal.innerHTML=`    <div class="modal-content">
+          <h4>Time To Make Your Bed</h4>
+          <form class="make-your-bed-form">
+
+            <div class="main-carousel" id="flickity-2">
+              <div class="carousel-cell">
+                <div class="second-carousel-image">
+                    <img src="https://i.imgur.com/eBMXUbX.png" alt="Image of bed" />
+                </div>
+                <div class="how-to-contents">
+                    <h3 class="carousel-body">Twin</h3>
+                </div>
+              </div>
+              <div class="carousel-cell">
+                <div class="second-carousel-image">
+                    <img src="https://i.imgur.com/U92wyel.png" alt="Image of bed" />
+                </div>
+                <div class="how-to-contents">
+                    <h3 class="carousel-body">Full</h3>
+                </div>
+              </div>
+              <div class="carousel-cell">
+                <div class="second-carousel-image">
+                    <img src="https://i.imgur.com/2jkitjA.png" alt="Image of bed" />
+                </div>
+                <div class="how-to-contents">
+                    <h3 class="carousel-body">Queen</h3>
+                </div>
+              </div>
+              <div class="carousel-cell">
+                <div class="second-carousel-image">
+                  <img src="https://i.imgur.com/H7soVZU.png" alt="Image of bed" />
+                </div>
+                <div class="how-to-contents">
+                  <h3 class="carousel-body">King</h3>
+                </div>
+              </div>
+            </div>
+
+          <input type="hidden" value="">
+
+        </div>
+        <div class="modal-footer">
+          <input type="submit" href="#modal2" class="modal-close waves-effect waves-green btn-flat modal-trigger" value="Submit">
+          </form>
+        </div>
+    `
+let elem = document.querySelectorAll('.main-carousel');
+
+let flktyTwo = new Flickity( elem[1], {
+  // contain: true,
+  wrapAround: true,
+  resize: true,
+  // autoPlay: 5000,
+  pauseAutoPlayOnHover: true
+})
+
+document.querySelector("#modal2").querySelector(".flickity-viewport").style.height="800px"
     //   document.getElementsByClassName("flickity-viewport")[1].style.height = "200px"
     //   document.getElementsByClassName('main-carousel')[1].flkty('resize')
     //   console.log(document.getElementsByClassName('main-carousel')[1])
