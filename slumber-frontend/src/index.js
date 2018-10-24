@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded',() => {
   })
 
   let flktyTwo = new Flickity( elem[1], {
-    contain: true,
+    // contain: true,
     wrapAround: true,
-    // resize: false,
+    resize: true,
     // autoPlay: 5000,
     pauseAutoPlayOnHover: true
   })
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded',() => {
     }
   })
 
-let hostID
+  let hostID
 
   const userInfoModal = document.querySelector(".user-info-modal")
   userInfoModal.addEventListener("submit", function (event) {
@@ -87,14 +87,17 @@ let hostID
       }),
     }).then(res=>res.json())
       .then(parsed=> hostID = parsed.id)
-    event.target.reset()
-      secondInstances.open()
-      document.getElementsByClassName("flickity-viewport")[1].style.height = "5000px"
-  })
 
-  // userInfoModal.addEventListener("submit", function (event) {
-  //
-  // })
+    event.target.reset()
+    secondInstances.open()
+    
+    //   document.getElementsByClassName("flickity-viewport")[1].style.height = "200px"
+    //   document.getElementsByClassName('main-carousel')[1].flkty('resize')
+    //   console.log(document.getElementsByClassName('main-carousel')[1])
+    //   .flkty.resize()
+
+
+  })
 
   window.addEventListener("click", function (event) {
     if (event.target.innerText === "SLUMBR") {
