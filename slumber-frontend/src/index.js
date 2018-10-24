@@ -81,6 +81,10 @@ document.addEventListener('DOMContentLoaded',() => {
     event.target.reset()
   })
 
+  userInfoModal.addEventListener("submit", function (event) {
+    instances.close()
+  })
+
   window.addEventListener("click", function (event) {
     if (event.target.innerText === "SLUMBR") {
       window.scrollTo({top: 0, behavior: 'smooth'})
