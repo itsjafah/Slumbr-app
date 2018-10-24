@@ -79,23 +79,24 @@ document.addEventListener('DOMContentLoaded',() => {
       },
       body: JSON.stringify({
         name: nameInput.value,
-        street_address: emailInput.value,
-        city: streetInput.value,
-        state: cityInput.value,
-        zip: stateInput.value,
-        email: zipInput.value,
+        street_address: streetInput.value,
+        city: cityInput.value,
+        state: stateInput.value,
+        zip: zipInput.value,
+        email: emailInput.value,
       }),
     }).then(res=>res.json())
       .then(parsed=> hostID = parsed.id)
 
     event.target.reset()
     secondInstances.open()
-    
+
     //   document.getElementsByClassName("flickity-viewport")[1].style.height = "200px"
     //   document.getElementsByClassName('main-carousel')[1].flkty('resize')
     //   console.log(document.getElementsByClassName('main-carousel')[1])
     //   .flkty.resize()
 
+    
 
   })
 
