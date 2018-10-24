@@ -12,10 +12,6 @@
   border-bottom: solid #f0f0f0 1px;
 }
 
-#how-it-works {
-  /* padding-top: 57px; */
-}
-
 .logo-tagline {
   display: flex;
   text-align: center;
@@ -101,8 +97,6 @@
   justify-content: center;
   flex-wrap: wrap;
   min-width: 100%;
-  /* border-top-style: solid;
-  border-bottom-style: solid; */
 }
 
 body {
@@ -110,13 +104,31 @@ body {
 }
 
 .under-banner {
-  /* padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 30px; */
-
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 30px;
-  margin-top: 650px;
+  margin-top: 667px;
   background-color: white;
+}
+
+#about-us {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+  padding-top: 30px;
+}
+
+.team-pic {
+  display: flex;
+  width: 40%;
+  margin: auto 0;
+}
+
+.us-content {
+  display; flex;
+  flex-direction: column;
+  padding-top: 10%;
+  width: 40%;
 }
