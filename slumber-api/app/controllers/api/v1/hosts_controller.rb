@@ -15,6 +15,12 @@ class Api::V1::HostsController < ApplicationController
     render json: @host, status: :created
   end
 
+  def destroy
+    @host = Host.find_by(id: params[:id])
+    @host.destroy
+    render json: @host, status: :created
+  end
+
   private
 
   def host_params

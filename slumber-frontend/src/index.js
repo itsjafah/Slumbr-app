@@ -8,11 +8,18 @@ document.addEventListener('DOMContentLoaded',() => {
   const aboutUsButton = document.getElementById('about-us-menu-button')
   const makeYourBedMenuButton = document.getElementById('make-your-bed-menu-button')
 
-
-  let elem = document.querySelector('.main-carousel');
-  let flkty = new Flickity( elem, {
+  let elem = document.querySelectorAll('.main-carousel');
+  let flkty = new Flickity( elem[0], {
     contain: true,
     wrapAround: true,
+    // autoPlay: 5000,
+    pauseAutoPlayOnHover: true
+  })
+
+  let flktyTwo = new Flickity( elem[1], {
+    contain: true,
+    wrapAround: true,
+    // resize: false,
     // autoPlay: 5000,
     pauseAutoPlayOnHover: true
   })
@@ -40,16 +47,18 @@ document.addEventListener('DOMContentLoaded',() => {
   let elems = document.querySelectorAll('.modal')
   let firstModal = document.querySelectorAll('.modal')[0]
   let secondModal = document.querySelectorAll('.modal')[1]
-  let instances = M.Modal.init(firstModal, {})
+  let firstInstances = M.Modal.init(firstModal, {})
+  let secondInstances = M.Modal.init(secondModal, {})
 
   window.addEventListener("click", function (event) {
     if (event.target.innerText === "MAKE YOUR BED") {
-      instances.open()
+      firstInstances.open()
     }
   })
 
-  const userInfoModal = document.querySelector(".user-info-modal")
+let hostID
 
+  const userInfoModal = document.querySelector(".user-info-modal")
   userInfoModal.addEventListener("submit", function (event) {
     event.preventDefault()
 
@@ -76,14 +85,16 @@ document.addEventListener('DOMContentLoaded',() => {
         zip: stateInput.value,
         email: zipInput.value,
       }),
-    })
-
+    }).then(res=>res.json())
+      .then(parsed=> hostID = parsed.id)
     event.target.reset()
+      secondInstances.open()
+      document.getElementsByClassName("flickity-viewport")[1].style.height = "5000px"
   })
 
-  userInfoModal.addEventListener("submit", function (event) {
-    instances.close()
-  })
+  // userInfoModal.addEventListener("submit", function (event) {
+  //
+  // })
 
   window.addEventListener("click", function (event) {
     if (event.target.innerText === "SLUMBR") {
