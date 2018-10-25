@@ -6,12 +6,13 @@
     <link rel="stylesheet" href="./stylesheets/index.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700" rel="stylesheet">
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 <body>
-  <div class="menu-bar">
+  <div class="menu-bar animated slideInDown">
     <div class="row" id="menu">
       <div class="col s12">
         <ul class="tabs">
@@ -19,18 +20,20 @@
           <li class="tab col s3"><a id="how-it-works-menu-button">How It Works</a></li>
           <li class="tab col s3"><a id="about-us-menu-button">About Us</a></li>
           <!-- <li class="tab col s3"><a id="make-your-bed-menu-button">Make Your Bed</a></li> -->
-          <li class="tab col s3"><a class="waves-effect waves-light modal-trigger" href="#modal1">Make Your Bed</a></li>
+          <li class="tab col s3"><a class="waves-effect waves-light modal-trigger" href="#modal1" id="about-us-menu-button">Make Your Bed</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="banner">
-      <div class="banner-img">
-          <div class="logo-tagline">
-              <h1 class="logo">Slumbr</h1>
-              <h4 class="tagline">It's fun. It's quirky. It's slumbr.</h4>
-          </div>
-      </div>
+  <div class='background-banner'>
+    <div class="banner">
+        <div class="banner-img animated zoomIn">
+            <div class="logo-tagline animated bounceInDown">
+                <h1 class="logo">Slumbr</h1>
+                <h4 class="tagline">It's fun. It's quirky. It's slumbr.</h4>
+            </div>
+        </div>
+    </div>
   </div>
   <div class="under-banner">
     <div class="section-container">

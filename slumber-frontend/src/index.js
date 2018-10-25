@@ -5,6 +5,7 @@ const aboutUsButton = document.getElementById('about-us-menu-button')
 const makeYourBedMenuButton = document.getElementById('make-your-bed-menu-button')
 let flktyTwo
 let bedId = 1
+
 const selectSlumbrMenuButton = () => {
   slumbrMenuButton.className = "active"
   howItWorksMenuButton.className = ""
@@ -156,3 +157,15 @@ orderInfoModal.addEventListener("submit", function (event) {
     bedId=1
   e.target.reset()
 })
+
+// SCROLL EVENT
+document.addEventListener('scroll', (event) => {
+  if (window.scrollY >= 1100) {
+    selectAboutUsMenuButton()
+  } else if (window.scrollY >= 400) {
+    selectHowItWorksMenuButton()
+  } else if (window.scrollY < 400){
+    selectSlumbrMenuButton()
+  }
+})
+// SCROLL EVENT END

@@ -21,6 +21,22 @@
   margin-top: 60px;
 }
 
+.active {
+  color: #3985ff !important;
+}
+
+#slumbr-menu-button:hover {
+  color: #3985ff;
+}
+
+#how-it-works-menu-button:hover {
+  color: #3985ff;
+}
+
+#about-us-menu-button:hover {
+  color: #3985ff;
+}
+
 .tagline {
   display: flex;
   color: #f0f0f0;
@@ -35,6 +51,10 @@
   margin-top: 1%;
   margin-bottom: -1%;
   font-size: 64px;
+}
+
+body {
+  background-color: #f9c6db;
 }
 
 .banner-img {
@@ -150,4 +170,19 @@ body {
   margin: auto;
   width: 80%;
   height: 40%;
+}
+
+.flickity-page-dots {
+  bottom: 0px;
+  opacity: 0;
+}
+/* white circles */
+.flickity-page-dots .dot {
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  background: transparent;
+}
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
 }
