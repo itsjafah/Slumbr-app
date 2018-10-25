@@ -95,6 +95,7 @@
     <form class="user-info-modal">
       <div class="modal-content">
         <h4>Please Enter Your Information</h4>
+        <hr>
         <input id="name-input" type="text" value="" placeholder="Name">
         <input id="email-input" type="text" value="" placeholder="Email Address">
         <input id="street-input" type="text" value="" placeholder="Street">
@@ -110,6 +111,84 @@
   </div>
   <!-- End Modal -->
   <div id="modal2" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Time To Make Your Bed</h4>
+      <hr>
+      <form class="make-your-bed-form">
+        <h5>Pick a bed size:</h5>
+        <div class="main-carousel" id="flickity-2">
+          <div class="bed-size-carousel-cell carousel-cell">
+            <div class="second-carousel-image">
+              <img class="bed-size-img" src="https://i.imgur.com/eBMXUbX.png" alt="Image of bed" />
+            </div>
+          </div>
+          <div class="bed-size-carousel-cell carousel-cell">
+            <div class="second-carousel-image">
+              <img class="bed-size-img" src="https://i.imgur.com/U92wyel.png" alt="Image of bed" />
+            </div>
+          </div>
+          <div class="bed-size-carousel-cell carousel-cell">
+            <div class="second-carousel-image">
+              <img class="bed-size-img" src="https://i.imgur.com/2jkitjA.png" alt="Image of bed" />
+            </div>
+          </div>
+          <div class="bed-size-carousel-cell carousel-cell">
+            <div class="second-carousel-image">
+              <img class="bed-size-img" src="https://i.imgur.com/H7soVZU.png" alt="Image of bed" />
+            </div>
+          </div>
+        </div>
+        <br>
+        <h5>Pick a bed type:</h5>
+        <div class="main-carousel" id="flickity-3">
+          <div class="bed-size-carousel-cell carousel-cell">
+            <div class="second-carousel-image">
+              <img class="bed-size-img" src="https://i.imgur.com/eBMXUbX.png" alt="Image of bed" />
+            </div>
+          </div>
+          <div class="bed-size-carousel-cell carousel-cell">
+            <div class="second-carousel-image">
+              <img class="bed-size-img" src="https://i.imgur.com/U92wyel.png" alt="Image of bed" />
+            </div>
+          </div>
+          <div class="bed-size-carousel-cell carousel-cell">
+            <div class="second-carousel-image">
+              <img class="bed-size-img" src="https://i.imgur.com/2jkitjA.png" alt="Image of bed" />
+            </div>
+          </div>
+          <div class="bed-size-carousel-cell carousel-cell">
+            <div class="second-carousel-image">
+              <img class="bed-size-img" src="https://i.imgur.com/H7soVZU.png" alt="Image of bed" />
+            </div>
+          </div>
+        </div>
+        <br>
+        <h5>How many pillows do you need?</h5>
+        <div class="pillow-option">
+          <select>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+        <h5>Do you need extra sheets?</h5>
+          <input type="radio" name="extra_sheets" value="true"> Yes!<br>
+          <input type="radio" name="extra_sheets" value="false"> Nope!<br>
+        <h5>When do you need your Slumbr?</h5>
+        <input type="date" name="start_date" value="">
+        <h5>When should we come pick it up?</h5>
+        <input type="date" name="end_date" value="">
+      <input type="hidden" value="">
+    </div>
+    <div class="modal-footer">
+      <input type="submit" href="#modal2" class="modal-close waves-effect waves-green btn-flat modal-trigger" value="Submit">
+      </form>
+    </div>
+
+
+
+
   </div>
 </div>
     <script src="./src/index.js"></script>

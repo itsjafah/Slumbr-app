@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded',() => {
   const userInfoModal = document.querySelector(".user-info-modal")
   userInfoModal.addEventListener("submit", function (event) {
     event.preventDefault()
+    document.querySelector("#modal2").querySelector("h4").innerText="Time To Make Your Bed"
     const nameInput = document.getElementById('name-input')
     const emailInput = document.getElementById('email-input')
     const streetInput = document.getElementById('street-input')
@@ -72,44 +73,19 @@ document.addEventListener('DOMContentLoaded',() => {
         email: emailInput.value,
       }),
     }).then(res=>res.json())
-      .then(parsed=> hostID = parsed.id)
+      .then(parsed=> {hostID = parsed.id
+      document.querySelector("#modal2").querySelector("h4").innerText+= " " +parsed.name + "!"
+    })
     event.target.reset()
     secondInstances.open()
-    secondModal.innerHTML=`
-        <div class="modal-content">
-          <h4>Time To Make Your Bed</h4>
-          <form class="make-your-bed-form">
-            <div class="main-carousel" id="flickity-2">
-              <div class="bed-size-carousel-cell carousel-cell">
-                <div class="second-carousel-image">
-                  <img class="bed-size-img" src="https://i.imgur.com/eBMXUbX.png" alt="Image of bed" />
-                </div>
-              </div>
-              <div class="bed-size-carousel-cell carousel-cell">
-                <div class="second-carousel-image">
-                  <img class="bed-size-img" src="https://i.imgur.com/U92wyel.png" alt="Image of bed" />
-                </div>
-              </div>
-              <div class="bed-size-carousel-cell carousel-cell">
-                <div class="second-carousel-image">
-                  <img class="bed-size-img" src="https://i.imgur.com/2jkitjA.png" alt="Image of bed" />
-                </div>
-              </div>
-              <div class="bed-size-carousel-cell carousel-cell">
-                <div class="second-carousel-image">
-                  <img class="bed-size-img" src="https://i.imgur.com/H7soVZU.png" alt="Image of bed" />
-                </div>
-              </div>
-            </div>
-          <input type="hidden" value="">
-        </div>
-        <div class="modal-footer">
-          <input type="submit" href="#modal2" class="modal-close waves-effect waves-green btn-flat modal-trigger" value="Submit">
-          </form>
-        </div>
-      `
   let elem = document.querySelectorAll('.main-carousel');
   let flktyTwo = new Flickity( elem[1], {
+    contain: true,
+    wrapAround: true,
+    resize: true,
+    pauseAutoPlayOnHover: true
+  })
+  let flktyThree = new Flickity( elem[2], {
     contain: true,
     wrapAround: true,
     resize: true,
@@ -131,3 +107,16 @@ document.addEventListener('DOMContentLoaded',() => {
     }
   })
 })
+//
+// const orderInfoModal = document.querySelector("#modal2")
+// orderInfoModal.addEventListener("submit", function (event) {
+//   event.preventDefault()
+//   const bedTypeInput = document.getElementById('name-input')
+//   const bedSizeInput = document.getElementById('email-input')
+//   const pillowInput = document.getElementById('street-input')
+//   const sheetsInput = document.getElementById('city-input')
+//   const startInput = document.getElementById('state-input')
+//   const endInput = document.getElementById('zip-input')
+//
+//   e.target.reset()
+// })

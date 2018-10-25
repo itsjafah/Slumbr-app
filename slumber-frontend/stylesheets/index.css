@@ -145,3 +145,9 @@ body {
   justify-content: center;
   max-height: 200px;
 }
+
+#flickity-3{
+  margin: auto;
+  width: 80%;
+  height: 40%;
+}
