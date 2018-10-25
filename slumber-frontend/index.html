@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
     <meta charset="utf-8">
@@ -110,84 +109,53 @@
       </div>
   </div>
   <!-- End Modal -->
+
   <div id="modal2" class="modal modal-fixed-footer">
+    <form class="make-your-bed-form">
     <div class="modal-content">
       <h4>Time To Make Your Bed</h4>
       <hr>
-      <form class="make-your-bed-form">
         <h5>Pick a bed size:</h5>
         <div class="main-carousel" id="flickity-2">
           <div class="bed-size-carousel-cell carousel-cell">
             <div class="second-carousel-image">
-              <img class="bed-size-img" src="https://i.imgur.com/eBMXUbX.png" alt="Image of bed" />
+              <img class="bed-size-img" id="1" src="https://i.imgur.com/eBMXUbX.png" alt="Image of bed" />
             </div>
           </div>
           <div class="bed-size-carousel-cell carousel-cell">
             <div class="second-carousel-image">
-              <img class="bed-size-img" src="https://i.imgur.com/U92wyel.png" alt="Image of bed" />
+              <img class="bed-size-img" id="2" src="https://i.imgur.com/U92wyel.png" alt="Image of bed" />
             </div>
           </div>
           <div class="bed-size-carousel-cell carousel-cell">
             <div class="second-carousel-image">
-              <img class="bed-size-img" src="https://i.imgur.com/2jkitjA.png" alt="Image of bed" />
+              <img class="bed-size-img" id="3" src="https://i.imgur.com/2jkitjA.png" alt="Image of bed" />
             </div>
           </div>
           <div class="bed-size-carousel-cell carousel-cell">
             <div class="second-carousel-image">
-              <img class="bed-size-img" src="https://i.imgur.com/H7soVZU.png" alt="Image of bed" />
+              <img class="bed-size-img" id="4" src="https://i.imgur.com/H7soVZU.png" alt="Image of bed" />
             </div>
           </div>
         </div>
         <br>
-        <h5>Pick a bed type:</h5>
-        <div class="main-carousel" id="flickity-3">
-          <div class="bed-size-carousel-cell carousel-cell">
-            <div class="second-carousel-image">
-              <img class="bed-size-img" src="https://i.imgur.com/eBMXUbX.png" alt="Image of bed" />
-            </div>
-          </div>
-          <div class="bed-size-carousel-cell carousel-cell">
-            <div class="second-carousel-image">
-              <img class="bed-size-img" src="https://i.imgur.com/U92wyel.png" alt="Image of bed" />
-            </div>
-          </div>
-          <div class="bed-size-carousel-cell carousel-cell">
-            <div class="second-carousel-image">
-              <img class="bed-size-img" src="https://i.imgur.com/2jkitjA.png" alt="Image of bed" />
-            </div>
-          </div>
-          <div class="bed-size-carousel-cell carousel-cell">
-            <div class="second-carousel-image">
-              <img class="bed-size-img" src="https://i.imgur.com/H7soVZU.png" alt="Image of bed" />
-            </div>
-          </div>
-        </div>
         <br>
+        <br>
+
         <h5>How many pillows do you need?</h5>
-        <div class="pillow-option">
-          <select>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-          </select>
-        </div>
-        <h5>Do you need extra sheets?</h5>
-          <input type="radio" name="extra_sheets" value="true"> Yes!<br>
-          <input type="radio" name="extra_sheets" value="false"> Nope!<br>
+          <input id="pillow-amount" type="number" name="" value="1">
+
         <h5>When do you need your Slumbr?</h5>
-        <input type="date" name="start_date" value="">
+        <input id="startDate" type="date" name="start_date">
         <h5>When should we come pick it up?</h5>
-        <input type="date" name="end_date" value="">
-      <input type="hidden" value="">
+        <input id="endDate" type="date" name="end_date">
     </div>
+
     <div class="modal-footer">
+      <button type="button" class="modal-close waves-effect waves-green btn-flat">Cancel</button>
       <input type="submit" href="#modal2" class="modal-close waves-effect waves-green btn-flat modal-trigger" value="Submit">
-      </form>
     </div>
-
-
-
+  </form>
 
   </div>
 </div>

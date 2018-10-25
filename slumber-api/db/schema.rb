@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2018_10_22_200237) do
     t.string "bed_type"
     t.string "size"
     t.integer "price"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

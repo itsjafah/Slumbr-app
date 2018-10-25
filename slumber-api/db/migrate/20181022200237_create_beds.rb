@@ -4,6 +4,7 @@ class CreateBeds < ActiveRecord::Migration[5.2]
       t.string :bed_type
       t.string :size
       t.integer :price
+      t.string :image
 
       t.timestamps
     end
