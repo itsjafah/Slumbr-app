@@ -57,6 +57,16 @@ body {
   background-color: #fbc3db;
 }
 
+#make-bed-button {
+  background-color: #fbc3db;
+  box-shadow: 5px 5px #dbe7fb;
+}
+
+#make-bed-button:hover {
+  background-color: #4089fb;
+  box-shadow: 5px 5px #f3d7ebb0;
+}
+
 .banner-img {
   background: url('https://i.imgur.com/2gqy9Sb.jpg');
 
@@ -105,6 +115,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-right: 10%;
 }
 
 .carousel-cell {
@@ -140,6 +151,7 @@ body {
   display: flex;
   width: 40%;
   margin: auto 0;
+  margin-top: 190px;
 }
 
 .us-content {

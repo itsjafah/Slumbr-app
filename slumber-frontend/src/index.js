@@ -110,7 +110,7 @@ window.addEventListener("click", function(event) {
       break;
     case "ABOUT US":
       window.scrollTo({
-        top: 1200,
+        top: 1250,
         behavior: 'smooth'
       })
       selectAboutUsMenuButton()
@@ -169,13 +169,18 @@ orderInfoModal.addEventListener("submit", function (event) {
 })
 
 const displayThirdModal = (confirmObj)=>{
-  return `<h4>${confirmObj.host.name}, confirm your order!</h4>
-                  <p>You will be receiving a ${confirmObj.bed.size} size ${confirmObj.bed.bed_type}
-                  on ${date_display(confirmObj.start_date)} and expecting to ship it back by ${date_display(confirmObj.end_date)}</p>
+  return `<h3>Well done, ${confirmObj.host.name.split(' ')[0]}! Please confirm the details of your order.</h3>
+          <hr>
+          <h5>You will be receiving a ${confirmObj.bed.size.toLowerCase()} size ${confirmObj.bed.bed_type.toLowerCase()} with ${confirmObj.pillows} pillow(s)
+          on ${date_display(confirmObj.start_date)} - We will expect you to send this back to us by ${date_display(confirmObj.end_date)}</h5>
 
-                  <p>Your address is ${confirmObj.host.street_address} in ${confirmObj.host.city}, ${confirmObj.host.state}  <p>
-
-                  `
+          <h5>Shipping Address:</h5>
+          <h6>${confirmObj.host.street_address}
+          <br>
+          ${confirmObj.host.city}, ${confirmObj.host.state}
+          <br>
+          ${confirmObj.host.zip}</h6>
+          `
 }
 
 // SCROLL EVENT
