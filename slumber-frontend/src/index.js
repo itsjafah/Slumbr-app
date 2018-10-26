@@ -88,6 +88,8 @@ let firstModal = document.querySelectorAll('.modal')[0]
 let secondModal = document.querySelectorAll('.modal')[1]
 let firstInstances = M.Modal.init(firstModal, {})
 let secondInstances = M.Modal.init(secondModal, {})
+let thirdModal = document.querySelectorAll('.modal')[2]
+let thirdInstances = M.Modal.init(thirdModal, {})
 let hostID
 
 window.addEventListener("click", function(event) {
@@ -119,6 +121,12 @@ window.addEventListener("click", function(event) {
     case "CANCEL":
       event.target.parentElement.parentElement.reset()
       break;
+    case "CONFIRM":
+      alert("Order submitted!")
+      break;
+    case "DELETE":
+      deleteOrder(confirmObj.id)
+      break;
   }
 })
 
@@ -130,14 +138,13 @@ document.addEventListener('DOMContentLoaded', () => {
 //   bedId = e.target.id
 // })
 
-
+let confirmObj
 const orderInfoModal = document.querySelector("#modal2")
 orderInfoModal.addEventListener("submit", function (event) {
   event.preventDefault()
   const pillowInput = document.getElementById('pillow-amount').value
   const startInput = document.getElementById('startDate').value
   const endInput = document.getElementById('endDate').value
-  debugger
   fetch('http://localhost:3000/api/v1/orders', {
       method: 'POST',
       headers: {
@@ -153,10 +160,23 @@ orderInfoModal.addEventListener("submit", function (event) {
         "total_price": 200,
       }),
     }).then(res => res.json())
-    .then(parsed => console.log(parsed))
+    .then(parsed => {
+      confirmObj=parsed
+      thirdModal.querySelector(".modal-content").innerHTML = displayThirdModal(confirmObj)})
     bedId=1
-  e.target.reset()
+  event.target.reset()
+  thirdInstances.open()
 })
+
+const displayThirdModal = (confirmObj)=>{
+  return `<h4>${confirmObj.host.name}, confirm your order!</h4>
+                  <p>You will be receiving a ${confirmObj.bed.size} size ${confirmObj.bed.bed_type}
+                  on ${date_display(confirmObj.start_date)} and expecting to ship it back by ${date_display(confirmObj.end_date)}</p>
+
+                  <p>Your address is ${confirmObj.host.street_address} in ${confirmObj.host.city}, ${confirmObj.host.state}  <p>
+
+                  `
+}
 
 // SCROLL EVENT
 document.addEventListener('scroll', (event) => {
@@ -169,3 +189,15 @@ document.addEventListener('scroll', (event) => {
   }
 })
 // SCROLL EVENT END
+
+const date_display = (date)=>{
+  let date_array = date.toString().split("-")
+  let newDate = [date_array[1], date_array[2], date_array[0]].join("/")
+  return newDate
+}
+
+const deleteOrder = (id)=>{
+  fetch('http://localhost:3000/api/v1/orders/'+ id, {
+      method: 'DELETE'})
+      .then(alert("Order deleted!"))
+    }

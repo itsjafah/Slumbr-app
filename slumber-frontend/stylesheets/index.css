@@ -54,7 +54,7 @@
 }
 
 body {
-  background-color: #f9c6db;
+  background-color: #fbc3db;
 }
 
 .banner-img {
@@ -63,7 +63,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-color: #f9c6db;
+  background-color: #fbc3db;
 
   right: 0;
   position: fixed;

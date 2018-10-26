@@ -21,10 +21,16 @@ class Api::V1::OrdersController < ApplicationController
     render json: @order, status: 202
   end
 
+  def destroy
+    @order = Order.find_by(id: params[:id])
+    @order.destroy
+    render json: @order, status: :ok
+  end
+
   private
 
   def order_params
     params.require(:order).permit(:bed_id, :host_id, :pillows, :extra_sheets, :start_date, :end_date, :total_price)
   end
-  
+
 end
